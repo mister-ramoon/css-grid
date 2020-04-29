@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filas</title>
+    <title>Displays</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -20,6 +20,17 @@
             padding: 10px;
             border: 1px solid red;
         }
+        .item:nth-of-type(4) {
+            background-color: blue;
+            overflow: auto;
+            /* display: subgrid */
+            /* display: inline-grid; */
+            display: grid;
+            grid-template: 50px 50px 50px / 200px 200px 200px;
+        }
+        .item .item {
+            background-color: yellow;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +38,13 @@
         <div class="item">Contenido #1</div>
         <div class="item">Contenido #2</div>
         <div class="item">Contenido #3</div>
-        <div class="item">Contenido #4</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+        </div>
         <div class="item">Contenido #5</div>
         <div class="item">Contenido #6</div>
         <div class="item">Contenido #7</div>
